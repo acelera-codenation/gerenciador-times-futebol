@@ -22,8 +22,7 @@ public class TimeStatisticas {
                 .stream()
                 .sorted(comparing(Jogador::getNivelHabilidade).reversed())
                 .limit(top)
-                .collect(Collectors.toList())
-                .stream().map(Jogador::getId)
+                .map(Jogador::getId)
                 .collect(Collectors.toList());
 
     }

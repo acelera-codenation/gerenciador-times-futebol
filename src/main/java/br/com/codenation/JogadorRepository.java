@@ -26,8 +26,7 @@ public class JogadorRepository {
         return todos.values()
                 .stream()
                 .filter(jogador -> jogador.getIdTime() == idTime)
-                .collect(Collectors.toList())
-                .stream().map(Jogador::getId)
+                .map(Jogador::getId)
                 .collect(Collectors.toList());
     }
 
